@@ -258,6 +258,18 @@ keybinds clear-defaults=true {
         bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "normal"; }
     }
+
+    // custom keybinds
+    shared_except "locked" {
+        // creates a new tab and asks for it to be named
+        bind "Ctrl Shift t" {
+            NewTab {
+                // this has an empty white space character to bypass the empty string requirements
+                name "‎";
+            };
+            SwitchToMode "RenameTab";
+        }
+    }
 }
 
 // Plugin aliases - can be used to change the implementation of Zellij
@@ -288,6 +300,10 @@ web_client {
     font "monospace"
 }
  
+
+// Themeing 
+theme "nord"
+
 // Use a simplified UI without special fonts (arrow glyphs)
 // Options:
 //   - true
