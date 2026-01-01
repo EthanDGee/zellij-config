@@ -158,8 +158,9 @@ keybinds clear-defaults=true {
         // added alt to prevent conflict with a variety of other cli tools
         bind "Ctrl Alt q" { Quit; }
     }
+    // switch from h to m to prevent conflict with lazvim 
     shared_except "locked" "move" {
-        bind "Ctrl h" { SwitchToMode "move"; }
+        bind "Ctrl m" { SwitchToMode "move"; }
     }
     shared_except "locked" "session" {
         bind "Ctrl o" { SwitchToMode "session"; }
@@ -188,11 +189,20 @@ keybinds clear-defaults=true {
 
     // room plugin 
     shared_except "locked" {
-        bind "Ctrl y" {
+        bind "Ctrl Shift s" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
                 floating true
                 ignore_case true
                 quick_jump true
+            }
+        }
+    }
+    // zellij forgot plugin 
+    shared_except "locked" {
+        bind "Ctrl Shift h" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-forgot.wasm" {
+                "LOAD_ZELLIJ_BINDINGS" "true"
+                floating true
             }
         }
     }
