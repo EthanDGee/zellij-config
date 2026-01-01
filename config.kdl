@@ -144,6 +144,7 @@ keybinds clear-defaults=true {
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
+        bind "Alt w" { CloseFocus; }
         bind "Alt o" { MoveTab "right"; }
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
@@ -183,6 +184,52 @@ keybinds clear-defaults=true {
     shared_except "locked" {
         bind "Ctrl Shift s" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+                "lock"                  "ctrl + g"
+                "unlock"                "ctrl + g"
+                "new pane"              "alt + n"
+                "change focus of pane"  "alt + arrow key"
+                "close pane"            "alt + x"
+                "rename pane"           "alt + c"
+                "toggle fullscreen"     "alt + f"
+                "toggle floating pane"  "alt + w"
+                "toggle embed pane"     "alt + e"
+                "choose right pane"     "alt + l"
+                "choose left pane"      "alt + r"
+                "choose upper pane"     "alt + k"
+                "choose lower pane"     "alt + j"
+                "increase pane size"    "alt + '+'"
+                "decrease pane size"    "alt + '-'"
+                "search tabs"           "ctrl + shift + s"
+                "new tab"               "ctrl + t + n"
+                "new tab + rename"      "ctrl + shift + t"
+                "close tab"             "ctrl + t + x"
+                "change focus of tab"   "ctrl + t + arrow key"
+                "rename tab"            "ctrl + t + r"
+                "sync tab"              "ctrl + t + s"
+                "break pane into new tab" "ctrl + t + b"
+                "break pane left"       "ctrl + t + ["
+                "break pane right"      "ctrl + t + ]"
+                "toggle tab"            "ctrl + t + tab"
+                "increase pane size"    "ctrl + n + +"
+                "decrease pane size"    "ctrl + n + -"
+                "increase pane top"     "ctrl + n + k"
+                "increase pane right"   "ctrl + n + l"
+                "increase pane bottom"  "ctrl + n + j"
+                "increase pane left"    "ctrl + n + h"
+                "decrease pane top"     "ctrl + n + K"
+                "decrease pane right"   "ctrl + n + L"
+                "decrease pane bottom"  "ctrl + n + J"
+                "decrease pane left"    "ctrl + n + H"
+                "move pane to top"      "ctrl + h + k"
+                "move pane to right"    "ctrl + h + l"
+                "move pane to bottom"   "ctrl + h + j"
+                "move pane to left"     "ctrl + h + h"
+                "search"                "ctrl + shift + s"
+                "go into edit mode"     "ctrl + s + e"
+                "detach session"        "ctrl + o + w"
+                "open session manager"  "ctrl + o + w"
+                "search keybinds"       "ctrl + shift + h"
+                "quit zellij"           "ctrl + alt + q"
                 floating true
                 ignore_case true
                 quick_jump true
