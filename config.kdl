@@ -3,10 +3,6 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "normal"; }
     }
     pane {
-        bind "left" { MoveFocus "left"; }
-        bind "down" { MoveFocus "down"; }
-        bind "up" { MoveFocus "up"; }
-        bind "right" { MoveFocus "right"; }
         bind "c" { SwitchToMode "renamepane"; PaneNameInput 0; }
         bind "d" { NewPane "down"; SwitchToMode "normal"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "normal"; }
@@ -27,8 +23,6 @@ keybinds clear-defaults=true {
     tab {
         bind "left" { GoToPreviousTab; }
         bind "down" { GoToNextTab; }
-        bind "up" { GoToPreviousTab; }
-        bind "right" { GoToNextTab; }
         bind "1" { GoToTab 1; SwitchToMode "normal"; }
         bind "2" { GoToTab 2; SwitchToMode "normal"; }
         bind "3" { GoToTab 3; SwitchToMode "normal"; }
@@ -42,8 +36,6 @@ keybinds clear-defaults=true {
         bind "]" { BreakPaneRight; SwitchToMode "normal"; }
         bind "b" { BreakPane; SwitchToMode "normal"; }
         bind "h" { GoToPreviousTab; }
-        bind "j" { GoToNextTab; }
-        bind "k" { GoToPreviousTab; }
         bind "l" { GoToNextTab; }
         bind "n" { NewTab; SwitchToMode "normal"; }
         bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
