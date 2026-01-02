@@ -12,6 +12,7 @@ This repository contains a highly customized Zellij configuration designed for a
     *   **zellij-forgot**: A plugin that provides a floating window displaying keybindings as a quick reference/cheatsheet. Activated by `Ctrl Shift h`.
     *   **room**: A floating window plugin for quick and intuitive tab switching. Activated by `Ctrl Shift s`.
     *   **zellij-favs**: A plugin for managing and saving favorite Zellij sessions, allowing for easy resurrection and organization. Activated by `Ctrl Alt f`.
+    *   **zj-status-bar**: An opinionated more compact customization of the status-bar. (Activated automatically upon startup)
 *   **Visual Customization**:
     *   **Theme**: Utilizes the included `lucario` theme.
     *   **Default Layout**: Employs a custom `starter` layout, which is a modified compact layout with the taskbar positioned at the top.
@@ -100,6 +101,10 @@ If you choose not to use the `install.sh` script, you'll need to manually downlo
 5.  **Create `zellij-favs` Cache Directory**:
     ```bash
     mkdir -p ~/.cache/zellij-favs/
+    ```
+6.  **Download `zj-status-bar`**:
+    ```bash
+    curl -L https://github.com/cristiand391/zj-status-bar/releases/download/0.3.0/zj-status-bar.wasm -o ~/.config/zellij/plugins/zj-status-bar.wasm
     ```
 
 ## Usage

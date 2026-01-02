@@ -1,7 +1,7 @@
 // A slightly modified compact layout with taskbar at the top
 layout {
     pane size=1 borderless=true {
-        plugin location="compact-bar"
-    }
+        plugin location="file:~/.config/zellij/plugins/status-bar.wasm"
+    } 
     pane
 }
