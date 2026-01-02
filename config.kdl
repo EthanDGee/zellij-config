@@ -184,32 +184,42 @@ keybinds clear-defaults=true {
     shared_except "locked" {
         bind "Ctrl Shift s" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+                floating true
+                ignore_case true
+                quick_jump true
+            }
+        }
+    }
+    // zellij forgot plugin 
+    shared_except "locked" {
+        bind "Ctrl Shift h" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-forgot.wasm" {
+                "LOAD_ZELLIJ_BINDINGS" "false"
+                // hotkeys
                 "lock"                  "ctrl + g"
                 "unlock"                "ctrl + g"
+                "search"                "ctrl + shift + s"
+                "go into edit mode"     "ctrl + s + e"
+                "detach session"        "ctrl + o + w"
+                "open session manager"  "ctrl + o + w"
+                "toggle pipe frames"    "ctrl + p + z"
+                "search keybinds"       "ctrl + shift + h"
+                "toggle toolbar"        "F1"
+                "quit zellij"           "ctrl + alt + q"
+
+                // panes
                 "new pane"              "alt + n"
+                "close pane"            "alt + w"
                 "change focus of pane"  "alt + arrow key"
-                "close pane"            "alt + x"
-                "rename pane"           "alt + c"
-                "toggle fullscreen"     "alt + f"
-                "toggle floating pane"  "alt + w"
-                "toggle embed pane"     "alt + e"
+                "rename pane"           "ctrl + p + c"
+                "toggle floating pane"     "alt + f"
+                "toggle embed pane"     "ctrl + p + e"
                 "choose right pane"     "alt + l"
                 "choose left pane"      "alt + r"
                 "choose upper pane"     "alt + k"
                 "choose lower pane"     "alt + j"
                 "increase pane size"    "alt + '+'"
                 "decrease pane size"    "alt + '-'"
-                "search tabs"           "ctrl + shift + s"
-                "new tab"               "ctrl + t + n"
-                "new tab + rename"      "ctrl + shift + t"
-                "close tab"             "ctrl + t + x"
-                "change focus of tab"   "ctrl + t + arrow key"
-                "rename tab"            "ctrl + t + r"
-                "sync tab"              "ctrl + t + s"
-                "break pane into new tab" "ctrl + t + b"
-                "break pane left"       "ctrl + t + ["
-                "break pane right"      "ctrl + t + ]"
-                "toggle tab"            "ctrl + t + tab"
                 "increase pane size"    "ctrl + n + +"
                 "decrease pane size"    "ctrl + n + -"
                 "increase pane top"     "ctrl + n + k"
@@ -224,25 +234,19 @@ keybinds clear-defaults=true {
                 "move pane to right"    "ctrl + h + l"
                 "move pane to bottom"   "ctrl + h + j"
                 "move pane to left"     "ctrl + h + h"
-                "search"                "ctrl + shift + s"
-                "go into edit mode"     "ctrl + s + e"
-                "detach session"        "ctrl + o + w"
-                "open session manager"  "ctrl + o + w"
-                "toggle pipe frames"    "ctrl + p + z"
-                "search keybinds"       "ctrl + shift + h"
-                "quit zellij"           "ctrl + alt + q"
-                "toggle toolbar"        "F1"
-                floating true
-                ignore_case true
-                quick_jump true
-            }
-        }
-    }
-    // zellij forgot plugin 
-    shared_except "locked" {
-        bind "Ctrl Shift h" {
-            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-forgot.wasm" {
-                "LOAD_ZELLIJ_BINDINGS" "true"
+                "break pane into new tab" "ctrl + t + b"
+                "break pane left"       "ctrl + t + ["
+                "break pane right"      "ctrl + t + ]"
+
+                //tabs
+                "new tab"               "ctrl + t + n"
+                "new tab + rename"      "ctrl + shift + t"
+                "close tab"             "ctrl + t + x"
+                "search tabs"           "ctrl + shift + s"
+                "change focused tab"   "ctrl + t + arrow key"
+                "rename tab"            "ctrl + t + r"
+                "sync tab"              "ctrl + t + s"
+                "toggle tab"            "ctrl + t + tab"
                 floating true
             }
         }
