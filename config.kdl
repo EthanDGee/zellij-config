@@ -228,8 +228,10 @@ keybinds clear-defaults=true {
                 "go into edit mode"     "ctrl + s + e"
                 "detach session"        "ctrl + o + w"
                 "open session manager"  "ctrl + o + w"
+                "toggle pipe frames"    "ctrl + p + z"
                 "search keybinds"       "ctrl + shift + h"
                 "quit zellij"           "ctrl + alt + q"
+                "toggle toolbar"        "F1"
                 floating true
                 ignore_case true
                 quick_jump true
@@ -323,7 +325,9 @@ keybinds clear-defaults=true {
 // changing these requires a restart to take effect
 plugins {
     about location="zellij:about"
-    compact-bar location="zellij:compact-bar"
+    compact-bar location="zellij:compact-bar" {
+      tooltip "F1"
+    }
     configuration location="zellij:configuration"
     filepicker location="zellij:strider" {
         cwd "/"
@@ -349,7 +353,11 @@ web_client {
  
 
 // Themeing 
-theme "nord"
+theme "lucario"
+
+
+// Layouts 
+default_layout "starter"
 
 // Use a simplified UI without special fonts (arrow glyphs)
 // Options:
@@ -582,7 +590,7 @@ theme "nord"
 // Whether to show tips on startup
 // Default: true
 // 
-// show_startup_tips false
+show_startup_tips false
  
 // Whether to show release notes on first version run
 // Default: true
