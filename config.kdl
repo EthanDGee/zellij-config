@@ -248,6 +248,16 @@ keybinds clear-defaults=true {
         }
     }
 
+    // zellij-fav plugin
+    shared_except "locked" {
+        bind "Ctrl Alt f" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-favs.wasm" {
+                floating true
+                display_tab_panes true
+            }
+    }
+}
+
     shared_among "pane" "tmux" {
         bind "x" { CloseFocus; SwitchToMode "normal"; }
     }
