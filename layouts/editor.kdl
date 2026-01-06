@@ -1,0 +1,9 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="file:~/.config/zellij/plugins/status-bar.wasm"
+    } 
+    pane name="editor" command="nvim" {
+        start_suspended false
+    }
+    pane name="terminal" size=25
+}
