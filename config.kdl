@@ -261,7 +261,7 @@ keybinds clear-defaults=true {
 
     // zellij-fav plugin
     shared_except "locked" {
-        bind "Ctrl Alt f" {
+        bind "Ctrl Shift f" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-favs.wasm" {
                 floating true
                 display_tab_panes true
@@ -380,6 +380,9 @@ theme "lucario"
 // Layouts 
 default_layout "starter"
 
+// editor 
+scrollback_editor "/usr/bin/nvim"
+
 // Use a simplified UI without special fonts (arrow glyphs)
 // Options:
 //   - true
@@ -387,10 +390,6 @@ default_layout "starter"
 // 
 // simplified_ui true
  
-// Choose the theme that is specified in the themes section.
-// Default: default
-// 
-// theme "dracula"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -491,7 +490,6 @@ default_layout "starter"
  
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
-// scrollback_editor "/usr/bin/vim"
  
 // A fixed name to always give the Zellij session.
 // Consider also setting `attach_to_session true,`
