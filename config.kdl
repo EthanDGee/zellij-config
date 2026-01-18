@@ -203,21 +203,32 @@ keybinds clear-defaults=true {
                 "detach session"        "ctrl + o, then d"
                 "open session manager"  "ctrl + o + w"
                 "toggle pipe frames"    "ctrl + p + z"
-                "search keybinds"       "ctrl + shift + h"
                 "toggle toolbar"        "F1"
                 "quit zellij"           "ctrl + alt + q"
 
+                // modes
+                "pane mode"             "ctrl + p"
+                "tab mode"              "ctrl + t"
+                "resize mode"           "ctrl + n"
+                "move mode"             "ctrl + m"
+                "session mode"          "ctrl + o"
+                "scroll mode"           "ctrl + alt + s"
+
                 // panes
-                "new pane"              "alt + n"
+                "new pane"              "alt + n or ctrl + p, then n"
                 "new pane down"         "ctrl + p + d"
                 "new pane right"        "ctrl + p + r"
                 "new stacked pane"      "ctrl + p + s"
-                "close pane"            "alt + w"
-                "change focus of pane"  "alt + arrow key"
+                "close pane"            "alt + w or ctrl + p, then x"
+                "change focus of pane"  "alt + arrow/hjkl or ctrl + p, then hjkl"
+                "focus next pane"       "ctrl + p + p"
                 "rename pane"           "ctrl + p + c"
-                "toggle floating pane"     "alt + f"
+                "fullscreen pane"       "ctrl + p + f"
+                "toggle floating pane"  "alt + f or ctrl + p, then w"
                 "toggle embed pane"     "ctrl + p + e"
                 "toggle pinned pane"    "ctrl + p + i"
+                "toggle pane in group"  "alt + p"
+                "mark group for action" "alt + shift + p"
                 "choose right pane"     "alt + l"
                 "choose left pane"      "alt + h"
                 "choose upper pane"     "alt + k"
@@ -225,8 +236,8 @@ keybinds clear-defaults=true {
                 // Pane Resizing (General)
                 "increase pane size"    "alt + '+'"
                 "decrease pane size"    "alt + '-'"
+             
                 // Pane Resizing (Fine-tuned, enter resize mode with Ctrl n)
-                "resize mode"           "ctrl + n"
                 "increase size up"      "ctrl + n + k"
                 "increase size right"   "ctrl + n + l"
                 "increase size down"    "ctrl + n + j"
@@ -250,10 +261,34 @@ keybinds clear-defaults=true {
                 "new tab + rename"      "ctrl + shift + t"
                 "close tab"             "ctrl + t + x"
                 "search tabs"           "ctrl + shift + s"
-                "change focused tab"   "ctrl + t + arrow key"
+                "change focused tab"    "ctrl + t + arrow key"
+                "go to tab 1-9"         "ctrl + t + 1-9"
+                "move tab left"         "alt + i"
+                "move tab right"        "alt + o"
                 "rename tab"            "ctrl + t + r"
                 "sync tab"              "ctrl + t + s"
                 "toggle tab"            "ctrl + t + tab"
+
+                // scroll
+                "scroll up"             "ctrl + alt + s, then k/up"
+                "scroll down"           "ctrl + alt + s, then j/down"
+                "page scroll up"        "ctrl + alt + s, then h/left/PageUp"
+                "page scroll down"      "ctrl + alt + s, then l/right/PageDown"
+                "half page scroll up"   "ctrl + alt + s, then u"
+                "half page scroll down" "ctrl + alt + s, then d"
+                "scroll to bottom"      "ctrl + alt + s, then ctrl + c"
+
+                // search (in scroll mode)
+                "search down"           "n"
+                "search up"             "p"
+                "toggle case sensitivity" "c"
+                "toggle whole word"     "o"
+                "toggle wrap search"    "w"
+
+                // extensions
+                "search keybinds"       "ctrl + shift + h"
+                
+
                 floating true
             }
         }
